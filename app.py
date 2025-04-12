@@ -1,6 +1,7 @@
 from flask import Flask
 from flasgger import Swagger
 from router.router import vitvini_bp
+import os
 
 app = Flask(__name__)
 swagger_config = {
@@ -32,4 +33,5 @@ swagger = Swagger(app, template=swagger_template)
 app.register_blueprint(vitvini_bp)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=80)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, port=port)
