@@ -32,4 +32,4 @@ swagger = Swagger(app, template=swagger_template)
 app.register_blueprint(vitvini_bp)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=80)
