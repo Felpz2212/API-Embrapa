@@ -72,7 +72,7 @@ def scrapping_comercializacao(ano=2023):
     return resultado
 
 def scrapping_processamento(ano=2023, opt=1):
-
+   
     opcoes = {
         1: 'subopt_01',
         2: 'subopt_02',
